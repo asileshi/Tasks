@@ -15,7 +15,7 @@ namespace GradeCalculator
             return total / subjectGrade.Count;
         }
 
-        public static void calculate()
+        public static void Calculate()
         {
             Console.WriteLine("Enter your name:");
             string name = Console.ReadLine();
@@ -27,24 +27,13 @@ namespace GradeCalculator
 
             for (int i = 0; i < totalSubject; i++)
             {
-                Console.WriteLine("Name of subject: ");
+                Console.Write("Name of subject: ");
                 string subject = Console.ReadLine();
 
-                Console.WriteLine("Grade value: ");
-                string userInput = Console.ReadLine();
+                Console.Write("Grade value: ");
+                float value = float.Parse(Console.ReadLine());
 
-                if (float.TryParse(userInput, out float value))
-                {
-                    if (subject != null)  // Add a null check
-                    {
-                        subjectGrade.Add(subject, value);
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("Invalid input. Please enter a valid floating-point number.");
-                    break;
-                }
+                subjectGrade.Add(subject, value);
             }
 
             foreach (string subject in subjectGrade.Keys)

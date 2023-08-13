@@ -1,13 +1,11 @@
 ﻿using System;
-
-namespace GradeCalculator
+namespace programCs
 {
     class Program
     {
         public static void Main()
         {
-            
-            GradeCalculator.Grade.calculate();
+    
         }
     }
 }
