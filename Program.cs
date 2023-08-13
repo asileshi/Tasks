@@ -1,4 +1,5 @@
 ﻿using System;
+using PalindromeCheck;
 namespace programCs
 {
     class Program
